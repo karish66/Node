@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Basic Todo Form</title>
     <style>
         * {
             font-family: Arial;
@@ -10,29 +10,29 @@
         }
     </style>
 </head>
+
 <body>
+    <input id="todo">
+    <button id="btn">Add</button>
+    <br>
+    <ul id="list">
+        <li>Task One</li>
+    </ul>
 
-<input id="todo"><button id="btn">ADD</button>
-<br>
-<ul id="list">
-    <li>Task One</li>
-</ul>
-<p id="para">HELLO</p>
 
-<script>
-let todoBox = document.getElementById('todo')
-let addBtn = document.getElementById('btn');
-let todoList = document.getElementById('list')
-addBtn.onclick = function () {
-    let todo = todoBox.value
-//    todoList.innerHTML +=
-//        '<li>' + todo + '</li>'
-    let newTaskListItem =
-        document.createElement('li') // <li></li>
-    newTaskListItem.innerText = todo;
-    todoList.appendChild(newTaskListItem)
-}
+    <p id="para">HELLO</p>
 
-</script>
+    <script>
+        let todoBox = document.getElementById('todo')
+        let addBtn = document.getElementById('btn');
+        let todoList = document.getElementById('list')
+        addBtn.onclick = function () {
+            let todo = todoBox.value
+            //todoList.innerHTML += '<li>' + todo + '</li>'
+            let newTaskListItem = document.createElement('li') // <li></li>
+            newTaskListItem.innerText = todo; // <li>text</li>
+            todoList.appendChild(newTaskListItem)
+        }
+    </script>
 </body>
 </html>
